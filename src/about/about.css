@@ -1,0 +1,49 @@
+.App-about {
+    padding: 100px 0;
+    background-image: url("../background.jpg");
+    background-size: cover;
+    color: #333;
+}
+
+@media (max-width: 767px) {
+    .hidiho {
+        font-size: x-large;
+    }
+
+    .profile-picture {
+        width: 150px;
+        border: 5px solid white;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .hidiho {
+        font-size: xx-large;
+    }
+
+    .profile-picture {
+        width: 150px;
+        border: 5px solid white;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .hidiho {
+        font-size: xx-large;
+    }
+
+    .profile-picture {
+        width: 300px;
+        border: 5px solid white;
+    }
+}
+
+small {
+    margin-top: 25px;
+}
+
+.description {
+    font-size: large;
+    text-align: left;
+}
