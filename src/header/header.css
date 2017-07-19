@@ -13,10 +13,11 @@
 
     .navbar .nav {
         text-align: center;
+        float: right;
     }
 
     li {
-        margin: 0 45px;
+        margin: 0 30px;
     }
 }
 
