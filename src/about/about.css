@@ -1,25 +1,53 @@
 .App-about {
     padding: 100px 0;
-    background: url("../background.jpg") top;
-    color: dimgrey;
+    color: cornsilk;
+    height: 100vh;
+}
+
+#container {
+    margin-top: 25vh;
+    transform: translateY(-25%);
 }
 
 .hidiho {
-    font-size: xx-large;
-    margin-top: 30px;
+    font-size: 35pt;
+    font-weight: 200;
+    margin-top: 50px;
+}
+
+.profile-picture {
+    width: 275px;
+    padding: 10px;
+    border: 2px solid cornsilk;
+}
+
+small {
+    margin-top: 25px;
+}
+
+a {
+    color: lightblue;
+}
+
+.description {
+    font-size: large;
+    text-align: left;
 }
 
 @media (max-width: 1199px) {
     .hidiho {
         font-size: xx-large;
-        margin-top: 30px;
     }
 }
 
 @media (max-width: 767px) {
     .hidiho {
         font-size: x-large;
-        margin-top: 30px;
+    }
+
+    .profile-picture {
+        width: 150px;
+        border: 2px solid cornsilk;
     }
 }
 
@@ -28,33 +56,4 @@
         font-size: large;
         margin-top: 15px;
     }
-}
-
-.profile-picture {
-    width: 300px;
-    border: 5px solid #76b8ef;
-}
-
-@media (max-width: 767px) {
-    .profile-picture {
-        width: 150px;
-        border: 5px solid #76b8ef;
-    }
-}
-
-small {
-    margin-top: 25px;
-}
-
-a {
-    color: #76b8ef;
-}
-
-.description {
-    font-size: large;
-    text-align: left;
-}
-
-.clear {
-    clear: both;
 }

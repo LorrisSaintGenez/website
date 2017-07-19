@@ -6,12 +6,12 @@ class About extends Component {
   render() {
     return (
       <div className="App-about">
-        <div className="container">
+        <div id="container" className="container">
           <div className="row">
             <div className="col-xs-12">
               <img src={Lorris} className="img-circle profile-picture" />
               <div className="hidiho">Hi, I'm <b>Lorris Saint-Genez</b> !</div>
-              <small>Engineer student <b><a href="http://www.epita.fr/"> @EPITA</a></b>, Full-Stack Web Developer</small>
+              <h4>Engineer student <b><a href="http://www.epita.fr/"> @EPITA</a></b> - Full-Stack Developer</h4>
             </div>
           </div>
         </div>

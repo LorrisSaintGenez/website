@@ -1,0 +1,52 @@
+.App-education {
+    background-color: lightslategray;
+    filter: opacity(70%);
+    color: white;
+    height: 100vh;
+}
+
+#education {
+    font-weight: 200;
+    font-size: 40pt;
+    margin: 40px 0;
+    padding-left: 22px;
+    text-align: left;
+}
+
+#school {
+    padding-left: 10px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.description-school {
+    font-weight: 200;
+    font-size: 20pt;
+    margin: 50px 0;
+}
+
+#school-image {
+    margin-bottom: 40px;
+    width: 50%;
+}
+
+#description-text {
+    text-align: justify;
+}
+
+@media (max-width: 991px) {
+    .App-education {
+        height: auto;
+    }
+
+    #school-image {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .description-school {
+        font-size: 15pt;
+    }
+}
