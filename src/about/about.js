@@ -11,7 +11,7 @@ class About extends Component {
             <div className="col-xs-12">
               <img src={Lorris} className="img-circle profile-picture" />
               <div className="hidiho">Hi, I'm <b>Lorris Saint-Genez</b> !</div>
-              <h4>Engineer student <b><a href="http://www.epita.fr/"> @EPITA</a></b>, Full-Stack Web Developer</h4>
+              <h4>Engineer student <b><a href="http://www.epita.fr/"> @EPITA</a></b> - Full-Stack Developer</h4>
             </div>
           </div>
         </div>

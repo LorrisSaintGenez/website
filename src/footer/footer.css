@@ -1,0 +1,15 @@
+.links {
+    position: fixed;
+    bottom: 0;
+    z-index: 99999;
+    font-size: medium;
+    font-weight: 600;
+    color: white;
+    background-color: #7c92c1;
+    padding: 15px 500px;
+    opacity: 0.2;
+}
+
+.links:hover {
+    opacity: 1;
+}
