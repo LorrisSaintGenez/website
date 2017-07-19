@@ -1,11 +1,18 @@
 .App-about {
     padding: 100px 0;
-    background: url("../background.jpg") top;
-    color: dimgrey;
+    color: cornsilk;
+    height: 100vh;
+    font-family: Raleway, sans-serif;
+}
+
+.container {
+    margin-top: 25vh;
+    transform: translateY(-25%);
 }
 
 .hidiho {
-    font-size: xx-large;
+    font-size: 35pt;
+    font-weight: 200;
     margin-top: 30px;
 }
 
@@ -31,14 +38,15 @@
 }
 
 .profile-picture {
-    width: 300px;
-    border: 5px solid #76b8ef;
+    width: 275px;
+    padding: 10px;
+    border: 2px solid cornsilk;
 }
 
 @media (max-width: 767px) {
     .profile-picture {
         width: 150px;
-        border: 5px solid #76b8ef;
+        border: 2px solid cornsilk;
     }
 }
 
@@ -47,7 +55,7 @@ small {
 }
 
 a {
-    color: #76b8ef;
+    color: lightblue;
 }
 
 .description {
