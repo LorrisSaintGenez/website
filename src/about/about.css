@@ -4,7 +4,7 @@
     height: 100vh;
 }
 
-.container {
+#container {
     margin-top: 25vh;
     transform: translateY(-25%);
 }
@@ -12,41 +12,13 @@
 .hidiho {
     font-size: 35pt;
     font-weight: 200;
-    margin-top: 30px;
-}
-
-@media (max-width: 1199px) {
-    .hidiho {
-        font-size: xx-large;
-        margin-top: 30px;
-    }
-}
-
-@media (max-width: 767px) {
-    .hidiho {
-        font-size: x-large;
-        margin-top: 30px;
-    }
-}
-
-@media (max-width: 331px) {
-    .hidiho {
-        font-size: large;
-        margin-top: 15px;
-    }
+    margin-top: 50px;
 }
 
 .profile-picture {
     width: 275px;
     padding: 10px;
     border: 2px solid cornsilk;
-}
-
-@media (max-width: 767px) {
-    .profile-picture {
-        width: 150px;
-        border: 2px solid cornsilk;
-    }
 }
 
 small {
@@ -62,6 +34,26 @@ a {
     text-align: left;
 }
 
-.clear {
-    clear: both;
+@media (max-width: 1199px) {
+    .hidiho {
+        font-size: xx-large;
+    }
+}
+
+@media (max-width: 767px) {
+    .hidiho {
+        font-size: x-large;
+    }
+
+    .profile-picture {
+        width: 150px;
+        border: 2px solid cornsilk;
+    }
+}
+
+@media (max-width: 331px) {
+    .hidiho {
+        font-size: large;
+        margin-top: 15px;
+    }
 }
