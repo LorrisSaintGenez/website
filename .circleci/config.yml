@@ -1,0 +1,19 @@
+version: 1
+jobs:
+  build:
+    working_directory: ~/website/
+    docker:
+      - image: circleci/node:4.8.2
+    steps:
+      - checkout
+      - run: sudo npm install -g npm@latest
+      - run: npm install
+      - run: npm run build
+    deployment:
+      staging:
+        branch: master
+        heroku:
+          appname: website-lorris-deploy
+        commands:
+          - npm run build
+          - npm run start
