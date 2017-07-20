@@ -60,7 +60,7 @@ class Education extends Component {
             </div>
             <div className="col-xs-12 col-lg-6 col-md-6 description-school">
               <div hidden={this.state.description_id}>
-                <img id="school-image" src={Epita} />
+                <img alt="EPITA" id="school-image" src={Epita} />
                 <br/>
                 <div id="description-text">
                   <b>EPITA</b> is a Privately Endowed Higher Educational Institution recognized and fully accredited by the French State.
@@ -72,7 +72,7 @@ class Education extends Component {
                 </div>
               </div>
               <div hidden={!this.state.description_id}>
-                <img id="school-image" src={Griffith} />
+                <img alt="Griffith" id="school-image" src={Griffith} />
                 <br/>
                 <div id="description-text">
                   <b>Griffith College Dublin</b> is part of Ireland's largest independent third level institution.
