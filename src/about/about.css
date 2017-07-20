@@ -2,12 +2,15 @@
     padding: 100px 0;
     color: cornsilk;
     height: 100vh;
-    background-color: rgba(240, 255, 255, 0.60);
+    background-color: rgba(53, 44, 38, 0.76);
+    filter: opacity(100%);
 }
 
-#container {
-    margin-top: 25vh;
-    transform: translateY(-25%);
+.centered {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .hidiho {
@@ -27,12 +30,7 @@ small {
 }
 
 a {
-    color: lightblue;
-}
-
-.description {
-    font-size: large;
-    text-align: left;
+    color: lightcoral;
 }
 
 @media (max-width: 1199px) {

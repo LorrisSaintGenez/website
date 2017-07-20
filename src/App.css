@@ -26,6 +26,7 @@
 
   display: block;
   background: url("./background.jpg") center;
+  background-size: cover;
   height: 100vh;
   filter: opacity(80%);
 }

@@ -37,7 +37,7 @@ class Education extends Component {
   render() {
 
     const selectedStyle = {
-      borderLeft: "2px solid dodgerblue",
+      borderLeft: "2px solid cornflowerblue",
       marginLeft: "-2px"
     };
 
@@ -50,7 +50,7 @@ class Education extends Component {
               {_.map(this.state.schools, (school, index) => {
                 return (
                   <div className="col-xs-12" key={index} style={this.state.description_id === index ? selectedStyle : null} id="school" onClick={() => this.descriptionSchool(index)}>
-                    <h1 id="school-name"><b>{school.name}</b></h1>
+                    <h1 id="item-name"><b>{school.name}</b></h1>
                     <h3>{school.degree}</h3>
                     <h4>{school.specialization}</h4>
                     <h4>{school.year}</h4>
