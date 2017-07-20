@@ -1,6 +1,6 @@
 .App-education {
-    background-color: lightslategray;
-    filter: opacity(70%);
+    background-color: rgba(178, 200, 218, 0.8);
+    filter: opacity(100%);
     color: white;
     height: 100vh;
 }
@@ -18,6 +18,10 @@
     margin-bottom: 50px;
     cursor: pointer;
     text-align: left;
+}
+
+#school-name {
+    color: lightcoral;
 }
 
 .description-school {

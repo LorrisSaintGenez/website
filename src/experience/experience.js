@@ -3,8 +3,7 @@ import _ from 'lodash';
 
 import './experience.css';
 
-import Epita from '../epita.png';
-import Griffith from '../griffith.jpg';
+import SG from '../sg.png';
 
 class Experience extends Component {
 
@@ -47,10 +46,10 @@ class Experience extends Component {
             <div id="experience">Experience</div>
             <div className="col-xs-12 col-lg-6 col-md-6 description-company">
               <div hidden={this.state.description_id}>
-                <img alt="EPITA" id="company-image" src={Epita} />
+                <img alt="SG" id="company-image" src={SG} />
                 <br/>
                 <div id="description-text">
-                  <b>EPITA</b> is a Privately Endowed Higher Educational Institution recognized and fully accredited by the French State.
+                  <b>Société Générale</b> is a Privately Endowed Higher Educational Institution recognized and fully accredited by the French State.
                   Programs accredited by the CTI Commission and the French Ministry of Higher Education.
                   <br/>
                   <br/>
@@ -59,8 +58,6 @@ class Experience extends Component {
                 </div>
               </div>
               <div hidden={!this.state.description_id}>
-                <img alt="Griffith" id="company-image" src={Griffith} />
-                <br/>
                 <div id="description-text">
                   <b>Griffith College Dublin</b> is part of Ireland's largest independent third level institution.
                   I am graduated from GCD since May 2015, in <b>Computer Science</b>, with a <b>3.12 GPA</b>.

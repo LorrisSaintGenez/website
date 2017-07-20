@@ -1,7 +1,7 @@
 .App-experience {
-    background-color: lightslategray;
+    background-color: rgba(240, 255, 255, 0.60);
     filter: opacity(70%);
-    color: white;
+    color: #4d4946;
     height: 100vh;
 }
 
