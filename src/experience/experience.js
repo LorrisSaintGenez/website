@@ -3,8 +3,7 @@ import _ from 'lodash';
 
 import './experience.css';
 
-import Epita from '../epita.png';
-import Griffith from '../griffith.jpg';
+import SG from '../sg.png';
 
 class Experience extends Component {
 
@@ -14,30 +13,31 @@ class Experience extends Component {
     this.state = {
       schools: [
         {
-          name: "EPITA",
-          degree: "Master of Science",
-          specialization: "Computer Science and Engineering",
-          year: "2013-2018"
+          name: "Société Générale",
+          sector: "Bank & Insurance",
+          job: "Full-Stack Web Developer",
+          year: "Sept. '16 - Jan. '17"
         },
         {
-          name: "Griffith College Dublin",
-          degree: "Bachelor of Science",
-          specialization: "Computer Science",
-          year: "2015"
+          name: "Bernar PLC",
+          sector: "Aeronautics Industry",
+          job: "Stock Manager",
+          year: "May '15 - June '15"
         }
       ],
       description_id: 0
     }
   }
 
-  descriptionSchool(id) {
+  descriptionExperience(id) {
     this.setState({description_id: id});
   }
 
   render() {
 
     const selectedStyle = {
-      borderRight: "2px solid dodgerblue"
+      borderRight: "2px solid dodgerblue",
+      marginLeft: "2px"
     };
 
     return (
@@ -45,42 +45,42 @@ class Experience extends Component {
         <div className="container">
           <div className="row">
             <div id="experience">Experience</div>
-            <div className="col-xs-12 col-lg-6 col-md-6 description-company">
-              <div hidden={this.state.description_id}>
-                <img alt="EPITA" id="company-image" src={Epita} />
-                <br/>
-                <div id="description-text">
-                  <b>EPITA</b> is a Privately Endowed Higher Educational Institution recognized and fully accredited by the French State.
-                  Programs accredited by the CTI Commission and the French Ministry of Higher Education.
-                  <br/>
-                  <br/>
-                  I am specialized in <b>Web and Mobile development</b>. I've learned how to build <b>fast, responsive and secured</b> applications.
-                  I will graduate in Summer 2018. I currently have a <b>3.3 GPA</b>.
-                </div>
-              </div>
-              <div hidden={!this.state.description_id}>
-                <img alt="Griffith" id="company-image" src={Griffith} />
-                <br/>
-                <div id="description-text">
-                  <b>Griffith College Dublin</b> is part of Ireland's largest independent third level institution.
-                  I am graduated from GCD since May 2015, in <b>Computer Science</b>, with a <b>3.12 GPA</b>.
-                  <br/>
-                  <br/>
-                  Throughout the curriculum, I've learned basics of <b>Android and Java development</b>, and advanced <b>Operating Systems</b> theory.
-                </div>
-              </div>
-            </div>
-            <div className="col-xs-12 col-lg-6 col-md-6">
+            <div className="col-xs-12 col-lg-6 col-md-6 col-lg-push-6 col-md-push-6">
               {_.map(this.state.schools, (school, index) => {
                 return (
-                  <div className="col-xs-12" key={index} style={this.state.description_id === index ? selectedStyle : null} id="company" onClick={() => this.descriptionSchool(index)}>
-                    <h1><b>{school.name}</b></h1>
-                    <h3>{school.degree}</h3>
-                    <h4>{school.specialization}</h4>
+                  <div className="col-xs-12" key={index} style={this.state.description_id === index ? selectedStyle : null} id="company" onClick={() => this.descriptionExperience(index)}>
+                    <h1 id="item-name"><b>{school.name}</b></h1>
+                    <h3>{school.sector}</h3>
+                    <h4>{school.job}</h4>
                     <h4>{school.year}</h4>
                   </div>
                 )
               })}
+            </div>
+            <div className="col-xs-12 col-lg-6 col-md-6 col-lg-pull-6 col-md-pull-6 description-company">
+              <div hidden={this.state.description_id}>
+                <img alt="SG" id="company-image" src={SG} />
+                <br/>
+                <div id="description-text">
+                  <b>Société Générale</b> is a French multinational banking and financial services company. The multinational is France's <b>third largest bank</b> by total assets.
+                  <br/>
+                  <br/>
+                  As a <b>Full-Stack Web Developer</b> Intern, I've developed a <b>web application</b> gathering various internal services, through <b>agile</b> development. MVP delivered in <b>less than three months</b>.
+                  Also, I've <b>enhanced</b> code and agility of the development with code reviews, <b>QA with > 80%</b> code coverage tests and internal API's pull requests.
+                  Finally, I've <b>taught</b> an assembly of developers about the basics of <b>Go</b> programming language.
+                </div>
+              </div>
+              <div hidden={!this.state.description_id}>
+                <div id="description-text">
+                  <b>Bernar PLC</b> was a small company, one of the six entities of Sira Groupe, specialized in manufacture of aircraft parts, such as <b>Rafale</b> and <b>Falcon</b>.
+                  The firm was working directly for <b>Dassault</b> and <b>Thalès</b>.
+                  <br/>
+                  <br/>
+                  During my internship as a <b>Stock Manager</b>, I was in charge of stocks and ERP (Enterprise Resource Planning).
+                  I have <b>increased</b> storage's efficiency, by deeply <b>redesigning</b> storage methods and various <b>team workshops</b>.
+                  Finally, my solutions were used <b>everywhere</b> in the company.
+                </div>
+              </div>
             </div>
           </div>
         </div>

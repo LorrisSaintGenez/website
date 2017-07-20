@@ -26,8 +26,9 @@
 
   display: block;
   background: url("./background.jpg") center;
+  background-size: cover;
   height: 100vh;
-  filter: opacity(66%);
+  filter: opacity(80%);
 }
 
 .linkedin {
