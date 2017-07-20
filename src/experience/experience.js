@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
-import './education.css';
+import './experience.css';
 
 import Epita from '../epita.png';
 import Griffith from '../griffith.jpg';
 
-class Education extends Component {
+class Experience extends Component {
 
   constructor(props) {
     super(props);
@@ -37,30 +37,17 @@ class Education extends Component {
   render() {
 
     const selectedStyle = {
-      borderLeft: "2px solid dodgerblue",
-      marginLeft: "-2px"
+      borderRight: "2px solid dodgerblue"
     };
 
     return (
-      <div className="App-education">
+      <div className="App-experience">
         <div className="container">
           <div className="row">
-            <div id="education">Education</div>
-            <div className="col-xs-12 col-lg-6 col-md-6">
-              {_.map(this.state.schools, (school, index) => {
-                return (
-                  <div className="col-xs-12" key={index} style={this.state.description_id === index ? selectedStyle : null} id="school" onClick={() => this.descriptionSchool(index)}>
-                    <h1><b>{school.name}</b></h1>
-                    <h3>{school.degree}</h3>
-                    <h4>{school.specialization}</h4>
-                    <h4>{school.year}</h4>
-                  </div>
-                )
-              })}
-            </div>
-            <div className="col-xs-12 col-lg-6 col-md-6 description-school">
+            <div id="experience">Experience</div>
+            <div className="col-xs-12 col-lg-6 col-md-6 description-company">
               <div hidden={this.state.description_id}>
-                <img id="school-image" src={Epita} />
+                <img id="company-image" src={Epita} />
                 <br/>
                 <div id="description-text">
                   <b>EPITA</b> is a Privately Endowed Higher Educational Institution recognized and fully accredited by the French State.
@@ -72,7 +59,7 @@ class Education extends Component {
                 </div>
               </div>
               <div hidden={!this.state.description_id}>
-                <img id="school-image" src={Griffith} />
+                <img id="company-image" src={Griffith} />
                 <br/>
                 <div id="description-text">
                   <b>Griffith College Dublin</b> is part of Ireland's largest independent third level institution.
@@ -83,6 +70,18 @@ class Education extends Component {
                 </div>
               </div>
             </div>
+            <div className="col-xs-12 col-lg-6 col-md-6">
+              {_.map(this.state.schools, (school, index) => {
+                return (
+                  <div className="col-xs-12" key={index} style={this.state.description_id === index ? selectedStyle : null} id="company" onClick={() => this.descriptionSchool(index)}>
+                    <h1><b>{school.name}</b></h1>
+                    <h3>{school.degree}</h3>
+                    <h4>{school.specialization}</h4>
+                    <h4>{school.year}</h4>
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
       </div>
@@ -90,4 +89,4 @@ class Education extends Component {
   }
 }
 
-export default Education;
+export default Experience;
