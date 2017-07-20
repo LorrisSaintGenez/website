@@ -1,13 +1,5 @@
 version: 1
 
-machine:
-  services:
-    - docker
-
-dependencies:
-  pre:
-    - npm install -g npm
-
 jobs:
   build:
     working_directory: ~/website/
