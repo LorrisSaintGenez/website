@@ -13,6 +13,17 @@
     transform: translate(-50%, -50%);
 }
 
+@supports (-ms-ime-align: auto) {
+    .App-about {
+        min-height: 100vh;
+    }
+
+    .centered {
+        position: static;
+        transform: translate(0%, 25%);
+    }
+}
+
 .hidiho {
     font-size: 35pt;
     font-weight: 200;
