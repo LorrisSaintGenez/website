@@ -1,42 +1,16 @@
 FROM node:6.9
 
-RUN useradd --user-group --create-home --shell /bin/false app && mkdir -p /opt/app
+WORKDIR /tmp
+COPY package.json /tmp/
+RUN npm config set registry http://registry.npmjs.org/ && npm install
 
-ENV HOME=/home/app TERM=xterm APP=/opt/app
+WORKDIR /usr/src/app
+COPY . /usr/src/app/
 
-# add more arguments from CI to the image so that `$ env` should reveal more info
-ARG CI_BUILD_ID
-ARG CI_BUILD_REF
-ARG CI_REGISTRY_IMAGE
-ARG CI_PROJECT_NAME
-ARG CI_BUILD_REF_NAME
-ARG CI_BUILD_TIME
+RUN cp -a /tmp/node_modules /usr/src/app/
 
-ENV CI_BUILD_ID=$CI_BUILD_ID CI_BUILD_REF=$CI_BUILD_REF CI_REGISTRY_IMAGE=$CI_REGISTRY_IMAGE \
-    CI_PROJECT_NAME=$CI_PROJECT_NAME CI_BUILD_REF_NAME=$CI_BUILD_REF_NAME CI_BUILD_TIME=$CI_BUILD_TIME \
-    npm_config_tmp=/tmp
+ENV NODE_ENV=production
+ENV PORT=4000
 
-WORKDIR $APP
-
-ADD package.json yarn.lock $APP/
-
-RUN chown -R app $APP && chgrp -R app $APP && chown -R app /usr/local
-
-USER app
-
-RUN npm install --global yarn
-
-# RUN yarn install && yarn upgrade
-RUN rm -rf node_modules && yarn install && yarn cache clean && npm cache clean && rm -rf ~/tmp/*
-
-ADD . $APP
-
-USER root
-
-RUN chown -R app $APP && chgrp -R app $APP
-
-USER app
-
-RUN npm run build
-
-CMD npm run start
+EXPOSE 4000
+CMD ["npm", "start" ]
