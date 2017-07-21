@@ -31,6 +31,13 @@
   filter: opacity(80%);
 }
 
+@supports (-ms-ime-align: auto) {
+  .background-image-style {
+    filter: opacity(0%);
+    z-index: -1;
+  }
+}
+
 .linkedin {
   position: fixed;
   top: 20px;
