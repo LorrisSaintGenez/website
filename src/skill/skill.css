@@ -1,0 +1,49 @@
+.App-skill {
+    background-color: rgba(0, 0, 0, 0.7);
+    filter: opacity(100%);
+    color: white;
+    min-height: 100vh;
+}
+
+#skills {
+    font-weight: 200;
+    font-size: 40pt;
+    margin: 40px 0;
+    padding-left: 22px;
+    text-align: left;
+}
+
+#skill {
+    margin-bottom: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.skill-image {
+    width: 200px;
+}
+
+.skill-description {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 20pt;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+    .skill-image {
+        width: 100px;
+    }
+
+    .skill-description {
+        font-size: 15pt;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 991px) {
+    #skill {
+        font-size: 25px;
+    }
+}
