@@ -17,6 +17,11 @@
   to { transform: rotate(360deg); }
 }
 
+.pnx-msg-icon {
+  width: 64px !important;
+  height: 24px !important;
+}
+
 .background-image-style {
   position: fixed;
   top: 0;
@@ -25,7 +30,7 @@
   z-index: 0;
 
   display: block;
-  background: url("./background.jpg") center;
+  background: url("assets/background.jpg") center;
   background-size: cover;
   height: 100vh;
   filter: opacity(80%);
