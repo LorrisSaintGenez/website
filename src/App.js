@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 import About from './about/about.js';
 import Education from './education/education.js';
 import Experience from './experience/experience.js';
+import Skill from './skill/skill.js';
 
-import Linkedin from './linkedin.png';
-import Github from './github.png';
+import Linkedin from './assets/linkedin.png';
+import Github from './assets/github.png';
 
 import './App.css';
 
@@ -24,6 +25,7 @@ class App extends Component {
         <About/>
         <Education/>
         <Experience/>
+        <Skill/>
       </div>
     );
   }
