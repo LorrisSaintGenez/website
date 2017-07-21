@@ -27,6 +27,10 @@ class Skill extends Component {
           image: "devicon-css3-plain colored"
         },
         {
+          name: "Go",
+          image: "devicon-go-plain"
+        },
+        {
           name: "HTML5",
           image: "devicon-html5-plain colored"
         },
@@ -43,6 +47,10 @@ class Skill extends Component {
           image: "devicon-laravel-plain colored"
         },
         {
+          name: ".Net",
+          image: "devicon-dot-net-plain colored"
+        },
+        {
           name: "Node JS",
           image: "devicon-nodejs-plain colored"
         },
@@ -57,6 +65,20 @@ class Skill extends Component {
         {
           name: "React JS",
           image: "devicon-react-original colored"
+        },
+      ],
+      databases : [
+        {
+          name: "MySQL",
+          image: "devicon-mysql-plain colored"
+        },
+        {
+          name: "PostgreSQL",
+          image: "devicon-postgresql-plain colored"
+        },
+        {
+          name: "MongoDB",
+          image: "devicon-mongodb-plain colored"
         },
       ],
       tools : [
@@ -105,6 +127,7 @@ class Skill extends Component {
           <div className="row">
             <div id="skills">Skills</div>
             <SkillComponent items={this.state.languages} skillType="Languages & Frameworks" />
+            <SkillComponent items={this.state.databases} skillType="Databases" />
             <SkillComponent items={this.state.tools} skillType="Tools" />
             <SkillComponent items={this.state.platforms} skillType="Platforms" />
           </div>
