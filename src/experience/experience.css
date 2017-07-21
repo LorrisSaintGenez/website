@@ -2,7 +2,6 @@
     background-color: rgba(53, 44, 38, 0.76);
     filter: opacity(100%);
     color: white;
-    height: 100vh;
 }
 
 #experience {
@@ -23,7 +22,7 @@
 .description-company {
     font-weight: 200;
     font-size: 20pt;
-    margin: 50px 0;
+    margin-bottom: 50px;
 }
 
 #company-image {
@@ -33,12 +32,6 @@
 
 #description-text {
     text-align: justify;
-}
-
-@media (max-width: 1200px) {
-    .App-experience {
-        height: auto;
-    }
 }
 
 @media (max-width: 991px) {
