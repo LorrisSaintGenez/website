@@ -2,6 +2,7 @@
     background-color: rgba(53, 44, 38, 0.76);
     filter: opacity(100%);
     color: white;
+    min-height: 100vh;
 }
 
 #experience {
