@@ -67,7 +67,7 @@ class Education extends Component {
                   Programs accredited by the CTI Commission and the French Ministry of Higher Education.
                   <br/>
                   <br/>
-                  I am specialized in <b>Web and Mobile development</b>. I've learned how to build <b>fast, responsive and secured</b> applications.
+                  I am specialized in <b>Web and Mobile development</b>. I've learned how to build <b>fast</b>, <b>responsive</b> and <b>secured</b> applications through a <b>continuous deployment</b> process.
                   I will graduate in Summer 2018. I currently have a <b>3.3 GPA</b>.
                 </div>
               </div>
