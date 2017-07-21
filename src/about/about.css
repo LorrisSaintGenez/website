@@ -14,8 +14,13 @@
 }
 
 @supports (-ms-ime-align: auto) {
+    .App-about {
+        min-height: 100vh;
+    }
+
     .centered {
-        position: absolute;
+        position: static;
+        transform: translate(0%, 25%);
     }
 }
 
