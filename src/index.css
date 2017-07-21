@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-
+/* Fix shacky background */
 @supports (-ms-ime-align: auto) {
   body {
     overflow: auto;
