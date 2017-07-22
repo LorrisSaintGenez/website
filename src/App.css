@@ -17,9 +17,33 @@
   to { transform: rotate(360deg); }
 }
 
-.pnx-msg-icon {
-  width: 64px !important;
-  height: 24px !important;
+.App-about {
+  padding: 100px 0;
+  color: white;
+  height: 100vh;
+  background-color: rgba(53, 44, 38, 0.76);
+  filter: opacity(100%);
+}
+
+.App-education {
+  background-color: rgba(0, 0, 0, 0.7);
+  filter: opacity(100%);
+  color: white;
+  min-height: 100vh;
+}
+
+.App-experience {
+  background-color: rgba(53, 44, 38, 0.76);
+  filter: opacity(100%);
+  color: white;
+  min-height: 100vh;
+}
+
+.App-skill {
+  background-color: rgba(0, 0, 0, 0.7);
+  filter: opacity(100%);
+  color: white;
+  min-height: 100vh;
 }
 
 .background-image-style {
@@ -34,13 +58,6 @@
   background-size: cover;
   height: 100vh;
   filter: opacity(80%);
-}
-
-@supports (-ms-ime-align: auto) {
-  .background-image-style {
-    filter: opacity(0%);
-    z-index: -1;
-  }
 }
 
 .linkedin {
@@ -61,22 +78,184 @@
   filter: opacity(70%);
 }
 
-@media (max-width: 767px) {
+.centered {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidiho {
+  font-size: 35pt;
+  font-weight: 200;
+  margin-top: 50px;
+}
+
+.profile-picture {
+  width: 275px;
+  padding: 10px;
+  border: 1px solid cornsilk;
+}
+
+.description {
+  font-weight: 200;
+  font-size: 20pt;
+  margin-bottom: 50px;
+}
+
+.skill-type {
+  text-align: left;
+  margin-bottom: 30pt;
+  color: lightcoral;
+}
+
+.div-skill {
+  margin-bottom: 25px;
+}
+
+#education {
+  font-weight: 200;
+  font-size: 40pt;
+  margin: 40px 0;
+  padding-left: 22px;
+  text-align: left;
+}
+
+#school {
+  padding-left: 10px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  text-align: left;
+}
+
+#item-name {
+  font-size: 30pt;
+  color: lightcoral;
+}
+
+#image {
+  margin-bottom: 40px;
+  width: 50%;
+}
+
+#description-text {
+  text-align: justify;
+}
+
+#experience {
+  font-weight: 200;
+  font-size: 40pt;
+  margin: 40px 0;
+  padding-right: 22px;
+  text-align: right;
+}
+
+#company {
+  padding-right: 10px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  text-align: right;
+}
+
+#description-text {
+  text-align: justify;
+}
+
+#skills {
+  font-weight: 200;
+  font-size: 40pt;
+  margin: 40px 0;
+  padding-left: 15px;
+  text-align: left;
+}
+
+#skill {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+small {
+  margin-top: 25px;
+}
+
+a {
+  color: lightcoral;
+}
+
+@supports (-ms-ime-align: auto) {
+  .background-image-style {
+    filter: opacity(0%);
+    z-index: -1;
+  }
+
+  .App-about {
+    min-height: 100vh;
+  }
+
+  .centered {
+    position: static;
+    transform: translate(0%, 25%);
+  }
+}
+
+@media (max-width: 331px) {
+  .hidiho {
+    font-size: large;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
   .linkedin {
-    position: fixed;
     top: 10px;
     right: 10px;
     width: 40px;
-    z-index: 99999;
-    filter: opacity(70%);
   }
 
   .github {
-    position: fixed;
     top: 10px;
     right: 60px;
     width: 40px;
-    z-index: 99999;
-    filter: opacity(70%);
+  }
+
+  .hidiho {
+    font-size: x-large;
+  }
+
+  .profile-picture {
+    width: 150px;
+    border: 2px solid cornsilk;
+  }
+
+  .description {
+    font-size: 15pt;
+  }
+
+  #company {
+    margin-bottom: 20px;
+  }
+
+  #school {
+    margin-bottom: 20px;
+  }
+
+  #item-name {
+    font-size: 20pt;
+  }
+}
+
+@media (max-width: 991px) {
+  #image {
+    width: 200px;
+  }
+
+  #skill {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .hidiho {
+    font-size: xx-large;
   }
 }
