@@ -97,13 +97,7 @@
   border: 1px solid cornsilk;
 }
 
-.description-school {
-  font-weight: 200;
-  font-size: 20pt;
-  margin-bottom: 50px;
-}
-
-.description-company {
+.description {
   font-weight: 200;
   font-size: 20pt;
   margin-bottom: 50px;
@@ -135,10 +129,11 @@
 }
 
 #item-name {
+  font-size: 30pt;
   color: lightcoral;
 }
 
-#school-image {
+#image {
   margin-bottom: 40px;
   width: 50%;
 }
@@ -160,11 +155,6 @@
   margin-bottom: 50px;
   cursor: pointer;
   text-align: right;
-}
-
-#company-image {
-  margin-bottom: 40px;
-  width: 50%;
 }
 
 #description-text {
@@ -237,21 +227,25 @@ a {
     border: 2px solid cornsilk;
   }
 
-  .description-school {
+  .description {
     font-size: 15pt;
   }
 
-  .description-company {
-    font-size: 15pt;
+  #company {
+    margin-bottom: 20px;
+  }
+
+  #school {
+    margin-bottom: 20px;
+  }
+
+  #item-name {
+    font-size: 20pt;
   }
 }
 
 @media (max-width: 991px) {
-  #school-image {
-    width: 200px;
-  }
-
-  #company-image {
+  #image {
     width: 200px;
   }
 

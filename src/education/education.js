@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
+import CategoryItem from '../common/categoryItem.js';
+
 import Epita from '../assets/epita.png';
 import Griffith from '../assets/griffith.jpg';
 
@@ -13,31 +15,28 @@ class Education extends Component {
       schools: [
         {
           name: "EPITA",
-          degree: "Master of Science",
-          specialization: "Computer Science and Engineering",
+          subtitle: "Master of Science",
+          description: "Computer Science and Engineering",
           year: "2013-2018"
         },
         {
           name: "Griffith College Dublin",
-          degree: "Bachelor of Science",
-          specialization: "Computer Science",
+          subtitle: "Bachelor of Science",
+          description: "Computer Science",
           year: "2015"
         }
       ],
       description_id: 0
-    }
+    };
+
+    this.descriptionDisplay = this.descriptionDisplay.bind(this);
   }
 
-  descriptionSchool(id) {
+  descriptionDisplay(id) {
     this.setState({description_id: id});
   }
 
   render() {
-
-    const selectedStyle = {
-      borderLeft: "2px solid cornflowerblue",
-      marginLeft: "-2px"
-    };
 
     return (
       <div className="App-education">
@@ -46,19 +45,12 @@ class Education extends Component {
             <div id="education">Education</div>
             <div className="col-xs-12 col-lg-6 col-md-6">
               {_.map(this.state.schools, (school, index) => {
-                return (
-                  <div className="col-xs-12" key={index} style={this.state.description_id === index ? selectedStyle : null} id="school" onClick={() => this.descriptionSchool(index)}>
-                    <h1 id="item-name"><b>{school.name}</b></h1>
-                    <h3>{school.degree}</h3>
-                    <h4>{school.specialization}</h4>
-                    <h4>{school.year}</h4>
-                  </div>
-                )
+                return (<CategoryItem isOnLeft={true} item={school} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)
               })}
             </div>
-            <div className="col-xs-12 col-lg-6 col-md-6 description-school">
+            <div className="col-xs-12 col-lg-6 col-md-6 description">
               <div hidden={this.state.description_id}>
-                <img alt="EPITA" id="school-image" src={Epita} />
+                <img alt="EPITA" id="image" src={Epita} />
                 <br/>
                 <div id="description-text">
                   <b>EPITA</b> is a Privately Endowed Higher Educational Institution recognized and fully accredited by the French State.
@@ -70,7 +62,7 @@ class Education extends Component {
                 </div>
               </div>
               <div hidden={!this.state.description_id}>
-                <img alt="Griffith" id="school-image" src={Griffith} />
+                <img alt="Griffith" id="image" src={Griffith} />
                 <br/>
                 <div id="description-text">
                   <b>Griffith College Dublin</b> is part of Ireland's largest independent third level institution.
