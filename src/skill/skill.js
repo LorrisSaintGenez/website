@@ -155,13 +155,13 @@ class Skill extends Component {
   render() {
 
     return (
-      <div className="App-skill">
+      <div className="App-left">
         <div className="container">
           <div className="row">
             <div id="skills">Skills</div>
             <div className="col-xs-12 col-lg-6 col-md-6">
               {_.map(this.state.types, (type, index) => {
-                return (<CategoryItem isOnLeft={true} item={type} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)
+                return (<CategoryItem key={index} isOnLeft={true} item={type} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)
               })}
             </div>
             <div className="col-xs-12 col-lg-6 col-md-6">

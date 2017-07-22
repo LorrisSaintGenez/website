@@ -39,13 +39,13 @@ class Education extends Component {
   render() {
 
     return (
-      <div className="App-education">
+      <div className="App-left">
         <div className="container">
           <div className="row">
             <div id="education">Education</div>
             <div className="col-xs-12 col-lg-6 col-md-6">
               {_.map(this.state.schools, (school, index) => {
-                return (<CategoryItem isOnLeft={true} item={school} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)
+                return (<CategoryItem key={index} isOnLeft={true} item={school} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)
               })}
             </div>
             <div className="col-xs-12 col-lg-6 col-md-6 description">

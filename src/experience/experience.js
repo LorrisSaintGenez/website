@@ -31,20 +31,19 @@ class Experience extends Component {
   }
 
   descriptionDisplay(id) {
-    console.log(id);
     this.setState({description_id: id});
   }
 
   render() {
 
     return (
-      <div className="App-experience">
+      <div className="App-right">
         <div className="container">
           <div className="row">
             <div id="experience">Experience</div>
             <div className="col-xs-12 col-lg-6 col-md-6 col-lg-push-6 col-md-push-6">
               {_.map(this.state.companies, (company, index) => {
-                return (<CategoryItem isOnLeft={false} item={company} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)
+                return (<CategoryItem key={index} isOnLeft={false} item={company} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)
               })}
             </div>
             <div className="col-xs-12 col-lg-6 col-md-6 col-lg-pull-6 col-md-pull-6 description">
