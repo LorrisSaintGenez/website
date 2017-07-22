@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 
 import SkillComponent from './skill-component.js';
-import './skill.css';
 
 class Skill extends Component {
 

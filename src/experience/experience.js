@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
-import './experience.css';
-
 import SG from '../assets/sg.png';
 
 class Experience extends Component {

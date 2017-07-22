@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
-import './education.css';
-
 import Epita from '../assets/epita.png';
 import Griffith from '../assets/griffith.jpg';
 
