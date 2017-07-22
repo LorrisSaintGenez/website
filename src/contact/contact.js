@@ -69,7 +69,7 @@ class Contact extends Component {
               })}
             </div>
             <div className="col-xs-12 col-lg-6 col-md-6 col-lg-pull-6 col-md-pull-6 description">
-              <div hidden={this.state.description_id} className="information-contact">
+              <div hidden={this.state.description_id} id="description-text">
                 <div className="hidiho">Email</div>
                 <a href="mailto:lorris.saint-genez@epita.fr">lorris.saint-genez@epita.fr</a>
                 <br/>
