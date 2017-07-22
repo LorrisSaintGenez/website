@@ -54,17 +54,18 @@
   font-weight: 200;
 }
 
-.navbar-inverse .navbar-toggle:hover {
-  background-color: lightcoral;
+.navbar-inverse .navbar-toggle:active {
+  background-color: rgba(100, 149, 237, 0.9);
 }
 
 .navbar-inverse .navbar-toggle {
-  border-color: lightcoral;
+  border-color: rgba(100, 149, 237, 0.9);
   background-color: transparent;
 }
 
 .navbar-inverse .navbar-collapse {
-  background-color: rgba(183, 169, 169, 0.26);
+  background-color: rgba(100, 149, 237, 0.9);
+  border-color: transparent;
 }
 
 .menu-item:hover {
@@ -241,6 +242,15 @@ a {
 }
 
 @media (max-width: 768px) {
+  .navbar-inverse .navbar-collapse {
+    background-color: rgba(100, 149, 237, 0.9);
+    border-color: rgba(100, 149, 237, 0.9);
+  }
+
+  .navbar-inverse .navbar-nav>li>a {
+    font-weight: 300;
+  }
+
   .linkedin {
     top: 10px;
     right: 10px;
