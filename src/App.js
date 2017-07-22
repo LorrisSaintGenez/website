@@ -4,6 +4,7 @@ import About from './about/about.js';
 import Education from './education/education.js';
 import Experience from './experience/experience.js';
 import Skill from './skill/skill.js';
+import Contact from './contact/contact.js';
 
 import Linkedin from './assets/linkedin.png';
 import Github from './assets/github.png';
@@ -26,6 +27,7 @@ class App extends Component {
         <Education/>
         <Experience/>
         <Skill/>
+        <Contact/>
       </div>
     );
   }

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
+import CategoryItem from '../common/categoryItem.js';
 import SkillComponent from './skill-component.js';
-import './skill.css';
 
 class Skill extends Component {
 
@@ -129,41 +129,44 @@ class Skill extends Component {
         }
       ],
       types: [
-        "Languages & Frameworks", "Databases", "Tools", "Platforms"
+        {
+          name: "Languages & Frameworks"
+        },
+        {
+          name: "Databases"
+        },
+        {
+          name: "Tools"
+        },
+        {
+          name: "Platforms"
+        },
       ],
-      skill_id: 0
-    }
+      description_id: 0
+    };
+
+    this.descriptionDisplay = this.descriptionDisplay.bind(this);
   }
 
-  displaySkills(id) {
-    this.setState({skill_id: id});
+  descriptionDisplay(id) {
+    this.setState({description_id: id});
   }
 
   render() {
 
-    const selectedStyle = {
-      borderLeft: "2px solid cornflowerblue",
-      marginLeft: "-2px"
-    };
-
-
     return (
-      <div className="App-skill">
+      <div className="App-left">
         <div className="container">
           <div className="row">
             <div id="skills">Skills</div>
             <div className="col-xs-12 col-lg-6 col-md-6">
               {_.map(this.state.types, (type, index) => {
-                return (
-                  <div className="col-xs-12" key={index} style={this.state.skill_id === index ? selectedStyle : null} id="school" onClick={() => this.displaySkills(index)}>
-                    <h1 id="item-name"><b>{type}</b></h1>
-                  </div>
-                )
+                return (<CategoryItem key={index} isOnLeft={true} item={type} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)
               })}
             </div>
             <div className="col-xs-12 col-lg-6 col-md-6">
               {_.map(this.state.skillset, (skilltype, index) => {
-                  return (<SkillComponent skilltype={skilltype} hidden={this.state.skill_id !== index} key={index} />)
+                  return (<SkillComponent skilltype={skilltype} hidden={this.state.description_id !== index} key={index} />)
                 }
               )}
             </div>

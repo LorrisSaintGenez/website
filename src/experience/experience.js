@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
-import './experience.css';
-
+import CategoryItem from '../common/categoryItem.js';
 import SG from '../assets/sg.png';
 
 class Experience extends Component {
@@ -11,55 +10,45 @@ class Experience extends Component {
     super(props);
 
     this.state = {
-      schools: [
+      companies: [
         {
           name: "Société Générale",
-          sector: "Bank & Insurance",
-          job: "Full-Stack Web Developer",
+          subtitle: "Bank & Insurance",
+          description: "Full-Stack Web Developer",
           year: "Sept. '16 - Jan. '17"
         },
         {
           name: "Bernar PLC",
-          sector: "Aeronautics Industry",
-          job: "Stock Manager",
+          subtitle: "Aeronautics Industry",
+          description: "Stock Manager",
           year: "May '15 - June '15"
         }
       ],
       description_id: 0
-    }
+    };
+
+    this.descriptionDisplay = this.descriptionDisplay.bind(this);
   }
 
-  descriptionExperience(id) {
+  descriptionDisplay(id) {
     this.setState({description_id: id});
   }
 
   render() {
 
-    const selectedStyle = {
-      borderRight: "2px solid dodgerblue",
-      marginLeft: "2px"
-    };
-
     return (
-      <div className="App-experience">
+      <div className="App-right">
         <div className="container">
           <div className="row">
             <div id="experience">Experience</div>
             <div className="col-xs-12 col-lg-6 col-md-6 col-lg-push-6 col-md-push-6">
-              {_.map(this.state.schools, (school, index) => {
-                return (
-                  <div className="col-xs-12" key={index} style={this.state.description_id === index ? selectedStyle : null} id="company" onClick={() => this.descriptionExperience(index)}>
-                    <h1 id="item-name"><b>{school.name}</b></h1>
-                    <h3>{school.sector}</h3>
-                    <h4>{school.job}</h4>
-                    <h4>{school.year}</h4>
-                  </div>
-                )
+              {_.map(this.state.companies, (company, index) => {
+                return (<CategoryItem key={index} isOnLeft={false} item={company} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)
               })}
             </div>
-            <div className="col-xs-12 col-lg-6 col-md-6 col-lg-pull-6 col-md-pull-6 description-company">
+            <div className="col-xs-12 col-lg-6 col-md-6 col-lg-pull-6 col-md-pull-6 description">
               <div hidden={this.state.description_id}>
-                <img alt="SG" id="company-image" src={SG} />
+                <img alt="SG" id="image" src={SG} />
                 <br/>
                 <div id="description-text">
                   <b>Société Générale</b> is a French multinational banking and financial services company. The multinational is France's <b>third largest bank</b> by total assets.
