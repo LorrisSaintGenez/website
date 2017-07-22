@@ -3,8 +3,8 @@ import _ from 'lodash';
 
 import './education.css';
 
-import Epita from '../epita.png';
-import Griffith from '../griffith.jpg';
+import Epita from '../assets/epita.png';
+import Griffith from '../assets/griffith.jpg';
 
 class Education extends Component {
 

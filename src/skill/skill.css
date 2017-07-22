@@ -1,0 +1,35 @@
+.App-skill {
+    background-color: rgba(0, 0, 0, 0.7);
+    filter: opacity(100%);
+    color: white;
+    min-height: 100vh;
+}
+
+#skills {
+    font-weight: 200;
+    font-size: 40pt;
+    margin: 40px 0;
+    padding-left: 15px;
+    text-align: left;
+}
+
+#skill {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.skill-type {
+    text-align: left;
+    margin-bottom: 30pt;
+    color: lightcoral;
+}
+
+.div-skill {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 991px) {
+    #skill {
+        font-size: 25px;
+    }
+}
