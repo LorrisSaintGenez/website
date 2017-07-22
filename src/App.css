@@ -205,6 +205,11 @@ a {
     font-size: large;
     margin-top: 15px;
   }
+
+  .links {
+    width: 150px;
+    padding: 20px;
+  }
 }
 
 @media (max-width: 768px) {
