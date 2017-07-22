@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 
 import CategoryItem from '../common/categoryItem.js';
+import Link from './link.js';
 
 import Linkedin from '../assets/linkedin.png';
 import Github from '../assets/github.png';
@@ -23,6 +24,28 @@ class Contact extends Component {
         {
           name: "Links"
         }
+      ],
+      links: [
+        {
+          name: "LinkedIn",
+          image: Linkedin,
+          link: "https://www.linkedin.com/in/lorris-saint-genez/"
+        },
+        {
+          name: "Facebook",
+          image: Facebook,
+          link: "https://www.facebook.com/Reach.Lorris"
+        },
+        {
+          name: "Github",
+          image: Github,
+          link: "https://github.com/LorrisSaintGenez"
+        },
+        {
+          name: "Resume",
+          image: Pdf,
+          link: Resume
+        },
       ],
     description_id: 0
   };
@@ -46,7 +69,7 @@ class Contact extends Component {
               })}
             </div>
             <div className="col-xs-12 col-lg-6 col-md-6 col-lg-pull-6 col-md-pull-6 description">
-              <div hidden={this.state.description_id}>
+              <div hidden={this.state.description_id} id="description-text">
                 <div className="hidiho">Email</div>
                 <a href="mailto:lorris.saint-genez@epita.fr">lorris.saint-genez@epita.fr</a>
                 <br/>
@@ -62,25 +85,12 @@ class Contact extends Component {
               </div>
               <div hidden={!this.state.description_id}>
                 <div className="hidiho">Click the links below !</div>
-                <div className="col-xs-12 col-md-6 col-lg-6" id="skill">
-                  <a href="https://www.linkedin.com/in/lorris-saint-genez/" target="_blank" rel="noopener noreferrer">
-                    <img alt="linkedin" src={Linkedin} className="links"/>
-                  </a>
-                  <div>Linkedin</div>
-                  <a href="https://github.com/LorrisSaintGenez" target="_blank" rel="noopener noreferrer">
-                    <img alt="github" src={Github} className="links"/>
-                  </a>
-                  <div>Github</div>
-                </div>
-                <div className="col-xs-12 col-md-6 col-lg-6" id="skill">
-                  <a href="https://www.facebook.com/Reach.Lorris" target="_blank" rel="noopener noreferrer">
-                    <img alt="facebook" src={Facebook} className="links"/>
-                  </a>
-                  <div>Facebook</div>
-                  <a href={Resume} target="_blank" rel="noopener noreferrer">
-                    <img alt="resume" src={Pdf} className="links"/>
-                  </a>
-                  <div>Resume</div>
+                <div className="col-xs-12 col-md-12 col-lg-12" id="skill">
+                  {_.map(this.state.links, (link, index) => {
+                    return (
+                      <Link link={link} key={index} />
+                    )
+                  })}
                 </div>
               </div>
             </div>
