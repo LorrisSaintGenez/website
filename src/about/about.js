@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Lorris from '../assets/lorris.jpg';
 
 class About extends Component {
+
   render() {
     return (
       <div className="App-about">
