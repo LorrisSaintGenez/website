@@ -39,6 +39,38 @@
   min-height: 100vh;
 }
 
+.navbar-inverse {
+  background: transparent none !important;
+  border: none;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #FFF;
+}
+
+.custom-footer {
+  width: 100%;
+  font-size: larger;
+  font-weight: 200;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+  background-color: lightcoral;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: lightcoral;
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-collapse {
+  background-color: rgba(183, 169, 169, 0.26);
+}
+
+.menu-item:hover {
+  color: darkorange;
+}
+
 .background-image-style {
   position: fixed;
   top: 0;
