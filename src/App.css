@@ -106,6 +106,10 @@
   margin-bottom: 25px;
 }
 
+.information-contact {
+  text-align: justify;
+}
+
 .links {
   width: 200px;
   padding: 20px;
