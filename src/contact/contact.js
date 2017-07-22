@@ -63,21 +63,21 @@ class Contact extends Component {
               <div hidden={!this.state.description_id}>
                 <div className="hidiho">Click the links below !</div>
                 <div className="col-xs-6 col-md-6 col-lg-6" id="skill">
-                  <a href="https://www.linkedin.com/in/lorris-saint-genez/" target="_blank">
+                  <a href="https://www.linkedin.com/in/lorris-saint-genez/" target="_blank" rel="noopener noreferrer">
                     <img alt="linkedin" src={Linkedin} className="links"/>
                   </a>
                   <div>Linkedin</div>
-                  <a href="https://github.com/LorrisSaintGenez" target="_blank">
+                  <a href="https://github.com/LorrisSaintGenez" target="_blank" rel="noopener noreferrer">
                     <img alt="github" src={Github} className="links"/>
                   </a>
                   <div>Github</div>
                 </div>
                 <div className="col-xs-6 col-md-6 col-lg-6" id="skill">
-                  <a href="https://www.facebook.com/Reach.Lorris" target="_blank">
+                  <a href="https://www.facebook.com/Reach.Lorris" target="_blank" rel="noopener noreferrer">
                     <img alt="facebook" src={Facebook} className="links"/>
                   </a>
                   <div>Facebook</div>
-                  <a href={Resume} target="_blank">
+                  <a href={Resume} target="_blank" rel="noopener noreferrer">
                     <img alt="resume" src={Pdf} className="links"/>
                   </a>
                   <div>Resume</div>

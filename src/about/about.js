@@ -9,7 +9,7 @@ class About extends Component {
         <div className="centered">
           <img alt="Lorris" src={Lorris} className="img-circle profile-picture" />
           <div className="hidiho">Hi, I'm <b>Lorris Saint-Genez</b> !</div>
-          <h4>Engineer student <b><a href="http://www.epita.fr/" target="_blank"> @EPITA</a></b> - Full-Stack Developer</h4>
+          <h4>Engineer student <b><a href="http://www.epita.fr/" target="_blank" rel="noopener noreferrer"> @EPITA</a></b> - Full-Stack Developer</h4>
         </div>
       </div>
     );
