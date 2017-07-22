@@ -146,6 +146,7 @@ class Skill extends Component {
       marginLeft: "-2px"
     };
 
+
     return (
       <div className="App-skill">
         <div className="container">
