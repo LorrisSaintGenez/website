@@ -51,7 +51,7 @@
 .custom-footer {
   width: 100%;
   font-size: larger;
-  font-weight: 200;
+  font-weight: 500;
 }
 
 .navbar-inverse .navbar-toggle:active {
@@ -64,12 +64,12 @@
 }
 
 .navbar-inverse .navbar-collapse {
-  background-color: rgba(100, 149, 237, 0.9);
+  background-color: rgba(100, 149, 237, 0.3);
   border-color: transparent;
 }
 
 .menu-item:hover {
-  color: darkorange;
+  color: coral;
 }
 
 .background-image-style {
@@ -87,21 +87,17 @@
 }
 
 .linkedin {
-  position: fixed;
-  top: 20px;
+  position: absolute;
+  bottom: 2px;
   right: 30px;
-  width: 64px;
-  z-index: 99999;
-  filter: opacity(70%);
+  width: 45px;
 }
 
 .github {
-  position: fixed;
-  top: 20px;
-  right: 110px;
-  width: 64px;
-  z-index: 99999;
-  filter: opacity(70%);
+  position: absolute;
+  bottom: 2px;
+  right: 85px;
+  width: 45px;
 }
 
 .centered {
@@ -111,10 +107,15 @@
   transform: translate(-50%, -50%);
 }
 
-.hidiho {
+.me {
   font-size: 35pt;
   font-weight: 200;
   margin-top: 25px;
+}
+
+.hidiho {
+  font-size: 35pt;
+  font-weight: 200;
 }
 
 .profile-picture {
@@ -140,7 +141,7 @@
 }
 
 .links {
-  width: 200px;
+  width: 150px;
   padding: 20px;
 }
 
@@ -165,7 +166,7 @@
 }
 
 #item-name:hover {
-  color: darkorange;
+  color: coral;
 }
 
 #image {
@@ -211,6 +212,11 @@ small {
 
 a {
   color: lightcoral;
+  cursor: pointer;
+}
+
+a:hover {
+  font-weight: 900;
 }
 
 @supports (-ms-ime-align: auto) {
@@ -236,14 +242,15 @@ a {
   }
 
   .links {
-    width: 150px;
+    width: 125px;
     padding: 20px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+
   .navbar-inverse .navbar-collapse {
-    background-color: rgba(100, 149, 237, 0.9);
+    background-color: rgba(100, 149, 237, 0.95);
     border-color: rgba(100, 149, 237, 0.9);
   }
 
@@ -252,14 +259,14 @@ a {
   }
 
   .linkedin {
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    left: 7px;
     width: 40px;
   }
 
   .github {
-    top: 10px;
-    right: 60px;
+    top: 5px;
+    left: 53px;
     width: 40px;
   }
 

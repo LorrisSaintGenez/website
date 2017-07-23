@@ -4,15 +4,15 @@ body {
   font-family: sans-serif;
 }
 /* Fix shacky background for IE/Edga - Prevent scroll events */
-@supports (-ms-ime-align: auto) {
-  body {
-    overflow: auto;
-    height: 100%;
-  }
+/*@supports (-ms-ime-align: auto) {*/
+  /*body {*/
+    /*overflow: auto;*/
+    /*height: 100%;*/
+  /*}*/
 
-  html {
-    overflow: hidden;
-    height: 100%;
-  }
-}
+  /*html {*/
+    /*overflow: hidden;*/
+    /*height: 100%;*/
+  /*}*/
+/*}*/
 

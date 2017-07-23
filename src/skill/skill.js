@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor'
+
 import _ from 'lodash';
 
 import CategoryItem from '../common/categoryItem.js';
@@ -158,18 +160,22 @@ class Skill extends Component {
       <div className="App-left">
         <div className="container">
           <div className="row">
-            <div id="skills">Skills</div>
-            <div className="col-xs-12 col-lg-6 col-md-6">
-              {_.map(this.state.types, (type, index) => {
-                return (<CategoryItem key={index} isOnLeft={true} item={type} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)
-              })}
-            </div>
-            <div className="col-xs-12 col-lg-6 col-md-6">
-              {_.map(this.state.skillset, (skilltype, index) => {
-                  return (<SkillComponent skilltype={skilltype} hidden={this.state.description_id !== index} key={index} />)
-                }
-              )}
-            </div>
+            <ScrollableAnchor id={'skill-anchor'}>
+              <div>
+                <div id="skills">Skills</div>
+                <div className="col-xs-12 col-lg-6 col-md-6">
+                  {_.map(this.state.types, (type, index) => {
+                    return (<CategoryItem key={index} isOnLeft={true} item={type} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)
+                  })}
+                </div>
+                <div className="col-xs-12 col-lg-6 col-md-6">
+                  {_.map(this.state.skillset, (skilltype, index) => {
+                      return (<SkillComponent skilltype={skilltype} hidden={this.state.description_id !== index} key={index} />)
+                    }
+                  )}
+                </div>
+              </div>
+            </ScrollableAnchor>
           </div>
         </div>
       </div>
