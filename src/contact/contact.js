@@ -34,14 +34,14 @@ class Contact extends Component {
           link: "https://www.linkedin.com/in/lorris-saint-genez/"
         },
         {
-          name: "Facebook",
-          image: Facebook,
-          link: "https://www.facebook.com/Reach.Lorris"
-        },
-        {
           name: "Github",
           image: Github,
           link: "https://github.com/LorrisSaintGenez"
+        },
+        {
+          name: "Facebook",
+          image: Facebook,
+          link: "https://www.facebook.com/Reach.Lorris"
         },
         {
           name: "Resume",
@@ -81,9 +81,9 @@ class Contact extends Component {
                     <a href="tel:+33622433212">+33 6 22 43 32 12</a>
                     <br/>
                     <div className="hidiho">Address</div>
-                    <h3>21 Rue Pasteur</h3>
-                    <h3>94270 Le Kremlin-Bicêtre</h3>
-                    <h3>FRANCE</h3>
+                    <div>21 Rue Pasteur</div>
+                    <div>94270 Le Kremlin-Bicêtre</div>
+                    <div>FRANCE</div>
                     <br/>
                     <div className="hidiho">Feel free to reach me !</div>
                   </div>

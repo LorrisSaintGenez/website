@@ -134,6 +134,11 @@
   text-align: left;
   margin-bottom: 30pt;
   color: lightcoral;
+  cursor: pointer;
+}
+
+.skill-type:hover {
+  color: coral;
 }
 
 .div-skill {
@@ -241,6 +246,11 @@ a:hover {
     margin-top: 15px;
   }
 
+  .me {
+    font-size: large;
+    margin-top: 15px;
+  }
+
   .links {
     width: 125px;
     padding: 20px;
@@ -260,17 +270,21 @@ a:hover {
 
   .linkedin {
     top: 5px;
-    left: 7px;
+    left: 6px;
     width: 40px;
   }
 
   .github {
     top: 5px;
-    left: 53px;
+    left: 50px;
     width: 40px;
   }
 
   .hidiho {
+    font-size: x-large;
+  }
+
+  .me {
     font-size: x-large;
   }
 
@@ -308,6 +322,10 @@ a:hover {
 
 @media (max-width: 1199px) {
   .hidiho {
+    font-size: xx-large;
+  }
+
+  .me {
     font-size: xx-large;
   }
 }
