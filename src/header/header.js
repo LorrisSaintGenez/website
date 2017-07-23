@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import { goToAnchor } from 'react-scrollable-anchor'
 
-class Footer extends Component {
+import Linkedin from '../assets/linkedin.png';
+import Github from '../assets/github.png';
+
+class Header extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-inverse navbar-fixed-bottom">
+      <nav className="navbar navbar-inverse navbar-fixed-top">
         <div className="container custom-footer">
           <div className="row">
             <div className="navbar-header">
@@ -18,27 +22,33 @@ class Footer extends Component {
             <div id="navbar" className="collapse navbar-collapse">
               <ul className="nav navbar-nav">
                 <li className="menu-item">
-                  <a href="#about-anchor" title="About">About</a>
+                  <a title="About" onClick={() => goToAnchor('about-anchor')}>About</a>
                 </li>
                 <li className="menu-item">
-                  <a href="#education-anchor" title="Education">Education</a>
+                  <a title="Education" onClick={() => goToAnchor("education-anchor")}>Education</a>
                 </li>
                 <li className="menu-item">
-                  <a href="#experience-anchor" title="Experience">Experience</a>
+                  <a title="Experience" onClick={() => goToAnchor("experience-anchor")}>Experience</a>
                 </li>
                 <li className="menu-item">
-                  <a href="#skill-anchor" title="Skills">Skills</a>
+                  <a title="Skills" onClick={() => goToAnchor("skill-anchor")}>Skills</a>
                 </li>
                 <li className="menu-item">
-                  <a href="#contact-anchor" title="Skills">Contact</a>
+                  <a title="Skills" onClick={() => goToAnchor("contact-anchor")}>Contact</a>
                 </li>
               </ul>
             </div>
           </div>
+          <a href="https://www.linkedin.com/in/lorris-saint-genez/">
+            <img alt="linkedin" src={Linkedin} className="linkedin" />
+          </a>
+          <a href="https://github.com/LorrisSaintGenez">
+            <img alt="github" src={Github} className="github "/>
+          </a>
         </div>
       </nav>
     );
   }
 }
 
-export default Footer;
+export default Header;

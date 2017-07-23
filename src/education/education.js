@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor'
+
 import _ from 'lodash';
 
 import CategoryItem from '../common/categoryItem.js';
@@ -42,37 +44,41 @@ class Education extends Component {
       <div className="App-left">
         <div className="container">
           <div className="row">
-            <div id="education">Education</div>
-            <div className="col-xs-12 col-lg-6 col-md-6">
-              {_.map(this.state.schools, (school, index) => {
-                return (<CategoryItem key={index} isOnLeft={true} item={school} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)
-              })}
-            </div>
-            <div className="col-xs-12 col-lg-6 col-md-6 description">
-              <div hidden={this.state.description_id}>
-                <img alt="EPITA" id="image" src={Epita} />
-                <br/>
-                <div id="description-text">
-                  <b>EPITA</b> is a Privately Endowed Higher Educational Institution recognized and fully accredited by the French State.
-                  Programs accredited by the CTI Commission and the French Ministry of Higher Education.
-                  <br/>
-                  <br/>
-                  I am specialized in <b>Web and Mobile development</b>. I've learned how to build <b>fast</b>, <b>responsive</b> and <b>secured</b> applications through a <b>continuous deployment</b> process.
-                  I will graduate in Summer 2018. I currently have a <b>3.3 GPA</b>.
+            <ScrollableAnchor id={'education-anchor'}>
+              <div>
+                <div id="education">Education</div>
+                <div className="col-xs-12 col-lg-6 col-md-6">
+                  {_.map(this.state.schools, (school, index) => {
+                    return (<CategoryItem key={index} isOnLeft={true} item={school} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)
+                  })}
+                </div>
+                <div className="col-xs-12 col-lg-6 col-md-6 description">
+                  <div hidden={this.state.description_id}>
+                    <img alt="EPITA" id="image" src={Epita} />
+                    <br/>
+                    <div id="description-text">
+                      <b>EPITA</b> is a Privately Endowed Higher Educational Institution recognized and fully accredited by the French State.
+                      Programs accredited by the CTI Commission and the French Ministry of Higher Education.
+                      <br/>
+                      <br/>
+                      I am specialized in <b>Web and Mobile development</b>. I've learned how to build <b>fast</b>, <b>responsive</b> and <b>secured</b> applications through a <b>continuous deployment</b> process.
+                      I will graduate in Summer 2018. I currently have a <b>3.3 GPA</b>.
+                    </div>
+                  </div>
+                  <div hidden={!this.state.description_id}>
+                    <img alt="Griffith" id="image" src={Griffith} />
+                    <br/>
+                    <div id="description-text">
+                      <b>Griffith College Dublin</b> is part of Ireland's largest independent third level institution.
+                      I am graduated from GCD since May 2015, in <b>Computer Science</b>, with a <b>3.12 GPA</b>.
+                      <br/>
+                      <br/>
+                      Throughout the curriculum, I've learned basics of <b>Android and Java development</b>, and advanced <b>Operating Systems</b> theory.
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div hidden={!this.state.description_id}>
-                <img alt="Griffith" id="image" src={Griffith} />
-                <br/>
-                <div id="description-text">
-                  <b>Griffith College Dublin</b> is part of Ireland's largest independent third level institution.
-                  I am graduated from GCD since May 2015, in <b>Computer Science</b>, with a <b>3.12 GPA</b>.
-                  <br/>
-                  <br/>
-                  Throughout the curriculum, I've learned basics of <b>Android and Java development</b>, and advanced <b>Operating Systems</b> theory.
-                </div>
-              </div>
-            </div>
+            </ScrollableAnchor>
           </div>
         </div>
       </div>
