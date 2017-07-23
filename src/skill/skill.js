@@ -163,12 +163,12 @@ class Skill extends Component {
             <ScrollableAnchor id={'skill-anchor'}>
               <div>
                 <div id="skills">Skills</div>
-                <div className="col-xs-12 col-lg-6 col-md-6">
+                <div className="col-xs-12 col-lg-8 col-md-8">
                   {_.map(this.state.types, (type, index) => {
                     return (<CategoryItem key={index} isOnLeft={true} item={type} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)
                   })}
                 </div>
-                <div className="col-xs-12 col-lg-6 col-md-6">
+                <div className="col-xs-12 col-lg-4 col-md-4">
                   {_.map(this.state.skillset, (skilltype, index) => {
                       return (<SkillComponent skilltype={skilltype} hidden={this.state.description_id !== index} key={index} />)
                     }
