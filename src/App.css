@@ -134,6 +134,11 @@
   text-align: left;
   margin-bottom: 30pt;
   color: lightcoral;
+  cursor: pointer;
+}
+
+.skill-type:hover {
+  color: coral;
 }
 
 .div-skill {
