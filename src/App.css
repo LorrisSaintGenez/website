@@ -21,12 +21,12 @@
   padding: 100px 0;
   color: white;
   height: 100vh;
-  background-color: rgba(53, 44, 38, 0.76);
+  background-color: rgba(38, 42, 53, 0.76);
   filter: opacity(100%);
 }
 
 .App-right {
-  background-color: rgba(53, 44, 38, 0.76);
+  background-color: rgba(38, 42, 53, 0.76);
   filter: opacity(100%);
   color: white;
   min-height: 100vh;
@@ -64,7 +64,7 @@
 }
 
 .navbar-inverse .navbar-collapse {
-  background-color: rgba(100, 149, 237, 0.3);
+  background-color: rgba(63, 66, 74, 0.97);
   border-color: transparent;
 }
 
@@ -88,16 +88,16 @@
 
 .linkedin {
   position: absolute;
-  bottom: 2px;
-  right: 30px;
-  width: 45px;
+  bottom: 5px;
+  right: 10px;
+  width: 40px;
 }
 
 .github {
   position: absolute;
-  bottom: 2px;
-  right: 85px;
-  width: 45px;
+  bottom: 5px;
+  right: 60px;
+  width: 40px;
 }
 
 .centered {
@@ -133,6 +133,8 @@
 .skill-type {
   text-align: left;
   margin-bottom: 30pt;
+  font-size: 35pt;
+  font-weight: 200;
   color: lightcoral;
   cursor: pointer;
 }
@@ -246,6 +248,10 @@ a:hover {
     margin-top: 15px;
   }
 
+  .skill-type {
+    font-size: large;
+  }
+
   .me {
     font-size: large;
     margin-top: 15px;
@@ -281,6 +287,10 @@ a:hover {
   }
 
   .hidiho {
+    font-size: x-large;
+  }
+
+  .skill-type {
     font-size: x-large;
   }
 
@@ -322,6 +332,10 @@ a:hover {
 
 @media (max-width: 1199px) {
   .hidiho {
+    font-size: xx-large;
+  }
+
+  .skill-type {
     font-size: xx-large;
   }
 
