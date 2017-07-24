@@ -5,9 +5,15 @@ import _ from 'lodash';
 class SkillComponent extends Component {
 
   render() {
+
+    const selectedStyle = {
+      borderLeft: "2px solid cornflowerblue",
+      paddingLeft: "7px"
+    };
+
     return (
       <div className="col-xs-12 col-md-12 col-lg-12 div-skill">
-        <div className="skill-type" onClick={() => this.props.descriptionDisplay(this.props.index)}><b>{this.props.title}</b></div>
+        <div className="skill-type" onClick={() => this.props.descriptionDisplay(this.props.index)}><b style={this.props.hidden ? null : selectedStyle}>{this.props.title}</b></div>
         <div hidden={this.props.hidden}>
         {_.map(this.props.skilltype, (skill, index) => {
           return (

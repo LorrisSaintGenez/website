@@ -33,7 +33,7 @@
 }
 
 .App-left {
-  background-color: rgba(62, 71, 76, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   filter: opacity(100%);
   color: white;
   min-height: 100vh;
@@ -88,16 +88,16 @@
 
 .linkedin {
   position: absolute;
-  bottom: 2px;
-  right: 30px;
-  width: 45px;
+  bottom: 5px;
+  right: 10px;
+  width: 40px;
 }
 
 .github {
   position: absolute;
-  bottom: 2px;
-  right: 85px;
-  width: 45px;
+  bottom: 5px;
+  right: 60px;
+  width: 40px;
 }
 
 .centered {

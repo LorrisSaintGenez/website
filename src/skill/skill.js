@@ -131,7 +131,7 @@ class Skill extends Component {
           name: "Platforms"
         },
       ],
-      description_id: -1
+      description_id: 0
     };
 
     this.descriptionDisplay = this.descriptionDisplay.bind(this);
