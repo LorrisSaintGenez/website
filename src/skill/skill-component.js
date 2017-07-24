@@ -7,7 +7,7 @@ class SkillComponent extends Component {
   render() {
     return (
       <div className="col-xs-12 col-md-12 col-lg-12 div-skill">
-        <h1 className="skill-type" onClick={() => this.props.descriptionDisplay(this.props.index)}><b>{this.props.title}</b></h1>
+        <div className="skill-type" onClick={() => this.props.descriptionDisplay(this.props.index)}><b>{this.props.title}</b></div>
         <div hidden={this.props.hidden}>
         {_.map(this.props.skilltype, (skill, index) => {
           return (
