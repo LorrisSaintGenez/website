@@ -42,9 +42,9 @@ class Experience extends Component {
       <div className="App-right">
         <div className="container">
           <div className="row">
-            <ScrollableAnchor id={'experience-anchor'}>
+            <ScrollableAnchor id={'experience'}>
               <div>
-                <div id="experience">Experience</div>
+                <div id="experience-style">Experience</div>
                 <div className="col-xs-12 col-lg-6 col-md-6 col-lg-push-6 col-md-push-6">
                   {_.map(this.state.companies, (company, index) => {
                     return (<CategoryItem key={index} isOnLeft={false} item={company} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)

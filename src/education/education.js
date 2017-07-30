@@ -44,9 +44,9 @@ class Education extends Component {
       <div className="App-left">
         <div className="container">
           <div className="row">
-            <ScrollableAnchor id={'education-anchor'}>
+            <ScrollableAnchor id={'education'}>
               <div>
-                <div id="education">Education</div>
+                <div id="education-style">Education</div>
                 <div className="col-xs-12 col-lg-6 col-md-6">
                   {_.map(this.state.schools, (school, index) => {
                     return (<CategoryItem key={index} isOnLeft={true} item={school} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)
