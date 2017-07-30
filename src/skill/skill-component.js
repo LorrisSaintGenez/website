@@ -17,7 +17,7 @@ class SkillComponent extends Component {
         <div hidden={this.props.hidden}>
         {_.map(this.props.skilltype, (skill, index) => {
           return (
-            <div className="col-xs-6 col-md-4 col-lg-4" key={index} id="skill">
+            <div className="col-xs-6 col-md-4 col-lg-4" key={index} id="skill-style">
               <i className={skill.image}/>
               <div>{skill.name}</div>
             </div>

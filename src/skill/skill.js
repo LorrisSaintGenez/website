@@ -141,7 +141,7 @@ class Skill extends Component {
 
     if (id === this.state.description_id) {
       this.setState({description_id: -1});
-      goToAnchor('skill-anchor');
+      goToAnchor('skill');
     }
     else {
       this.setState({description_id: id});
@@ -172,7 +172,7 @@ class Skill extends Component {
       <div className="App-left">
         <div className="container">
           <div className="row">
-            <ScrollableAnchor id={'skill-anchor'}>
+            <ScrollableAnchor id={'skill'}>
               <div>
                 <div id="skills">Skills</div>
                 <div className="col-xs-12 col-lg-12 col-md-12">

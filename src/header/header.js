@@ -22,19 +22,19 @@ class Header extends Component {
             <div id="navbar" className="collapse navbar-collapse">
               <ul className="nav navbar-nav">
                 <li className="menu-item">
-                  <a title="About" onClick={() => goToAnchor('about-anchor')}>About</a>
+                  <a title="About" onClick={() => goToAnchor('about')}>About</a>
                 </li>
                 <li className="menu-item">
-                  <a title="Education" onClick={() => goToAnchor("education-anchor")}>Education</a>
+                  <a title="Education" onClick={() => goToAnchor("education")}>Education</a>
                 </li>
                 <li className="menu-item">
-                  <a title="Experience" onClick={() => goToAnchor("experience-anchor")}>Experience</a>
+                  <a title="Experience" onClick={() => goToAnchor("experience")}>Experience</a>
                 </li>
                 <li className="menu-item">
-                  <a title="Skills" onClick={() => goToAnchor("skill-anchor")}>Skills</a>
+                  <a title="Skills" onClick={() => goToAnchor("skill")}>Skills</a>
                 </li>
                 <li className="menu-item">
-                  <a title="Skills" onClick={() => goToAnchor("contact-anchor")}>Contact</a>
+                  <a title="Skills" onClick={() => goToAnchor("contact")}>Contact</a>
                 </li>
               </ul>
             </div>

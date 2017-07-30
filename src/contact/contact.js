@@ -64,9 +64,9 @@ class Contact extends Component {
       <div className="App-right">
         <div className="container">
           <div className="row">
-            <ScrollableAnchor id={'contact-anchor'}>
+            <ScrollableAnchor id={'contact'}>
               <div>
-                <div id="experience">Contact</div>
+                <div id="experience-style">Contact</div>
                 <div className="col-xs-12 col-lg-6 col-md-6 col-lg-push-6 col-md-push-6">
                   {_.map(this.state.items, (item, index) => {
                     return (<CategoryItem key={index} isOnLeft={false} item={item} index={index} description_id={this.state.description_id} descriptionDisplay={this.descriptionDisplay} />)

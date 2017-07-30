@@ -152,7 +152,7 @@
   padding: 20px;
 }
 
-#education {
+#education-style {
   font-weight: 200;
   font-size: 40pt;
   margin: 40px 0;
@@ -185,7 +185,7 @@
   text-align: justify;
 }
 
-#experience {
+#experience-style {
   font-weight: 200;
   font-size: 40pt;
   margin: 40px 0;
@@ -208,7 +208,7 @@
   text-align: left;
 }
 
-#skill {
+#skill-style {
   margin-bottom: 20px;
   font-size: 30px;
 }
@@ -325,7 +325,7 @@ a:hover {
     width: 200px;
   }
 
-  #skill {
+  #skill-style {
     font-size: 25px;
   }
 }

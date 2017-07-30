@@ -7,7 +7,7 @@ class About extends Component {
 
   render() {
     return (
-      <ScrollableAnchor id={'about-anchor'}>
+      <ScrollableAnchor id={'about'}>
         <div className="App-about">
           <div className="centered">
             <img alt="Lorris" src={Lorris} className="img-circle profile-picture" />
